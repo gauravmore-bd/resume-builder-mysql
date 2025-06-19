@@ -1,0 +1,63 @@
+[Users]
+- user_id (PK)
+- name
+- email (UNIQUE)
+- password_hash
+- created_at
+
+[Templates]
+- template_id (PK)
+- name
+- description
+
+[Resume]
+- resume_id (PK)
+- user_id (FK → Users)
+- template_id (FK → Templates)
+- title
+- created_at
+- updated_at
+
+[Resume_Versions]
+- version_id (PK)
+- resume_id (FK → Resume)
+- version_number
+- created_at
+
+[Sections]
+- section_id (PK)
+- name
+- default_order
+
+[Resume_Sections]
+- resume_section_id (PK)
+- version_id (FK → Resume_Versions)
+- section_id (FK → Sections)
+- section_order
+
+[Section_Data]
+- data_id (PK)
+- resume_section_id (FK → Resume_Sections)
+- field_name
+- field_value
+
+[Audit_Log]
+- log_id (PK)
+- user_id (FK → Users)
+- action
+- table_name
+- record_id
+- timestamp
+- description
+
+//////
+Online_Resume_Builder_SQL_Project/
+│
+├── schema.sql
+├── procedures.sql
+├── triggers.sql
+├── views.sql
+├── sample_data.sql
+├── demo_queries.sql
+├── ER_Diagram.png  ← (or .pdf)
+└── README.md
