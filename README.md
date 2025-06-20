@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧾 Online Resume Builder (MySQL Only)
 
 This is a **feature-rich, normalized MySQL database** schema designed for an Online Resume Builder system. It supports user accounts, resume templates, multi-section content, tags, versioning, collaboration, audit logging, soft deletes, and a unified export view.
@@ -112,3 +113,7 @@ SET @current_user_id = 1; -- or any valid user_id
 -Soft deleting and restoring a section
 -Fetching audit logs
 -Viewing export-ready data
+=======
+# resume-builder-mysql
+MySQL-only database for an Online Resume Builder system
+>>>>>>> 3117d6f463e8692c336d3b602a85b98f3cb8800b
