@@ -1,5 +1,3 @@
--- Drop existing database if exists
-DROP DATABASE IF EXISTS resume_builder;
 CREATE DATABASE resume_builder;
 USE resume_builder;
 
